@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Is het al kandi af dag?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    .antwoord {
+      font-size: 5rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>is het al kandi af dag?</h1>
+  <div class="antwoord" id="antwoord"></div>
+
+  <script>
+    const vandaag = new Date();
+    const dag = vandaag.getDate();
+    const maand = vandaag.getMonth() + 1; // Maanden beginnen bij 0
+
+    const antwoord = (dag === 21 && maand === 6) ? "JA" : "nee";
+    document.getElementById("antwoord").textContent = antwoord;
+  </script>
+</body>
+</html>
